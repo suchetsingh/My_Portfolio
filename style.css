@@ -18,6 +18,7 @@ body{
 nav h1{
     font-size: 30px;
     font-weight: 700;
+    user-select: none;
 }
 .container{
     padding: 10px 7%;
@@ -40,7 +41,9 @@ nav ul li a{
     position: relative;
 }
 /* nav ul li a:hover{
-    border-bottom: 2px solid white;  easy way of adding hover
+    border-bottom: 3px solid white;
+    transition: .5s;
+    animation: ease-in-out;
 } */
 nav ul li a::after{
     content: '';
@@ -49,12 +52,13 @@ nav ul li a::after{
     background: lightsalmon;
     position: absolute;
     left: 0;
-    bottom: -5px;
     transition: .5s;
+    bottom: -5px;
 }
 nav ul li a:hover::after{
     width: 100%;
 }
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
@@ -62,7 +66,82 @@ nav ul li a:hover::after{
 .header-text h1{
     font-size: 60px;
     margin-top: 30px;
+    width: 30%;
 }
 .header-text h1 span{
     color: burlywood;
+}
+
+
+/* ------------about------- */
+
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-co1-1{
+    flex-basis: 35%;
+}
+.about-co1-1 img{
+    width: 100%;
+    border-radius: 25px;
+}
+.about-co1-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: lightsalmon;
+    position: absolute;
+    left: 0;
+    transition: .5s;
+    bottom: -5px;
+}
+.tab-links.active-link::after{
+    width: 75%;
+}
+/* .tab-links:hover{ */
+    /* border-bottom: 5px solid white; */
+    /* color: white; */
+/* } */
+
+.tab-contents ul li{
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
 }

@@ -20,11 +20,62 @@
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
-                <h1>Hi, I'm <span>Suchet</span> <br> From India</h1>
+                <h1>Hi, I'm <span>Suchet</span> From India</h1>
             </div>
         </div>
     </div>
+<!-- -----------------------about----> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-co1-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-co1-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I'm Suchet Singh, a BE student in ECE at Thapar Institute of Engineering and Technology. Passionate about software development, I'm proficient in C, C++, JavaScript, SQL, HTML, Bootstrap, CSS, and React. Eager to leverage these skills for innovative projects and continuous growth in the dynamic realm of technology. </p>
 
-    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-2023</span><br>Partigya Abhyan NGO</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>High School from S.T Kabir Public School</li>
+                            <li><span>2020-2024</span><br>BE from TIET Patiala</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let tablinks=document.getElementsByClassName("tab-links");
+        let tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
 </body>
 </html>
